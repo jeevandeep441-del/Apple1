@@ -21,14 +21,23 @@
             text-align: center;
         }
 
+        button {
+            background: blue;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 20px;
+            border-radius: 10px;
+        }
+
+        #message {
+            display: none;
+            margin-top: 30px;
+        }
+
         h1 {
             color: white;
             font-size: 35px;
-        }
-
-        p {
-            font-size: 25px;
-            font-weight: bold;
         }
 
         .red {
@@ -42,36 +51,34 @@
         .blue {
             color: dodgerblue;
         }
-
-        button {
-            background: blue;
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            font-size: 20px;
-            border-radius: 10px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background: dodgerblue;
-        }
     </style>
 </head>
 
 <body>
 
-    <h1>क्या बे लोडू चल जा 😂</h1>
-
-    <p>
-        <span class="red">LOL</span>
-        <span class="red">YOU'RE</span>
-        <span class="red">ඞ GAY</span>
-    </p>
-
-    <button onclick="alert('😂 LOL!')">
+    <!-- Ye pehle dikhega -->
+    <button onclick="showMessage()">
         CLICK ME
     </button>
+
+    <!-- Ye click karne ke BAAD dikhega -->
+    <div id="message">
+
+        <h1>क्या बे लोडू चल जा 😂</h1>
+
+        <p>
+            <span class="red">LOL</span>
+            <span class="green">YOU'RE</span>
+            <span class="blue">ඞ GAY</span>
+        </p>
+
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById("message").style.display = "block";
+        }
+    </script>
 
 </body>
 </html>
